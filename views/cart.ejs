@@ -1,0 +1,95 @@
+
+    <%- include('partials/header') %>
+
+    <body>
+        <div class="header">
+            <div class="container">
+                <%- include('partials/navbar') %>
+            </div>
+        </div>
+
+        <!-- Cart Items Details -->
+        <div class="small-container cart-page">
+            <h2>Your Shopping Cart</h2>
+
+            <table id="cart-table">
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                <!-- Products will be injected here via JS -->
+            </table>
+
+            <div class="total-price">
+                <table>
+                    <!-- Totals will be inserted via JS -->
+                    <tr><td>Subtotal</td><td>₹0.00</td></tr>
+                    <tr><td>Tax</td><td>₹0.00</td></tr>
+                    <tr><td>Total</td><td>₹0.00</td></tr>
+                </table>
+            </div>
+
+            <div class="checkout-section" style="margin-top: 20px;">
+                <button id="checkout-btn" class="btn">Proceed to checkout &#8594;</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and iOS mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="images/play-store.png">
+                            <img src="images/app-store.png">
+                        </div>
+                    </div>
+                    <div class="footer-col2">
+                        <img src="images/logo-white.png">
+                        <p>Our Purpose Is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many.</p>
+                    </div>
+                    <div class="footer-col3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright"><a href="#">Copyright 2025</a></p>
+            </div>
+        </div>
+
+        <!-- JS for toggle menu -->
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px";
+
+            function menutoggle() {
+                if (MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight = "200px";
+                } else {
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+        <!-- Cart logic -->
+        <script src="/js/cart.js"></script>
+    </body>
+</html>
